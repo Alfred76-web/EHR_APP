@@ -1,4 +1,3 @@
-
 package com.example.ehrsystem.database
 
 import androidx.room.Entity
