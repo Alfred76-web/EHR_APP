@@ -13,6 +13,15 @@
         android:theme="@style/Theme.EHRSystem"
         tools:targetApi="31">
         <activity
+            android:name=".DipenseMedicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPendingPrescriptions"
+            android:exported="false" />
+        <activity
+            android:name=".PrescribeMedicationActivity"
+            android:exported="false" />
+        <activity
             android:name=".DiagnosePatientActivity"
             android:exported="false" />
         <activity
@@ -72,6 +81,13 @@
         <activity
             android:name=".PharmacistActivity"
             android:exported="false" />
+        <!-- Doctor Module -->
+        <activity android:name=".DiagnosePatientActivity" android:exported="false" />
+        <activity android:name=".PrescribeMedicationActivity" android:exported="false" />
+
+        <!-- Pharmacist Module -->
+        <activity android:name=".ViewPendingPrescriptionsActivity" android:exported="false" />
+        <activity android:name=".DispenseMedicationActivity" android:exported="false" />
     </application>
 
 </manifest>

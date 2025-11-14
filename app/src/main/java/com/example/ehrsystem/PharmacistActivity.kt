@@ -1,5 +1,6 @@
 package com.example.ehrsystem
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -11,23 +12,21 @@ class PharmacistActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pharmacist)
 
-        // Find views
         val cardViewPrescriptions = findViewById<CardView>(R.id.cardViewPrescriptions)
         val cardDispenseMed = findViewById<CardView>(R.id.cardDispenseMed)
         val cardInventory = findViewById<CardView>(R.id.cardInventory)
         val btnBack = findViewById<Button>(R.id.btnBack)
 
-        // Set click listeners
         cardViewPrescriptions.setOnClickListener {
-            Toast.makeText(this, "View Prescriptions clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ViewPendingPrescriptionsActivity::class.java))
         }
 
         cardDispenseMed.setOnClickListener {
-            Toast.makeText(this, "Dispense Medication clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ViewPendingPrescriptionsActivity::class.java))
         }
 
         cardInventory.setOnClickListener {
-            Toast.makeText(this, "Manage Inventory clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Inventory management - Coming soon", Toast.LENGTH_SHORT).show()
         }
 
         btnBack.setOnClickListener {
