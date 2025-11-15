@@ -73,10 +73,33 @@ class EHRRepository(private val database: EHRDatabase) {
         database.appointmentDao().insert(appointment)
     }
 
+    suspend fun updateAppointment(appointment: Appointment) {
+        database.appointmentDao().update(appointment)
+    }
+
     val scheduledAppointments: LiveData<List<Appointment>> =
         database.appointmentDao().getScheduledAppointments()
 
     fun getAppointmentsByPatient(patientId: Int): LiveData<List<Appointment>> {
         return database.appointmentDao().getAppointmentsByPatient(patientId)
+    }
+
+    // User operations - ADD THESE
+    suspend fun insertUser(user: User): Long {
+        return database.userDao().insert(user)
+    }
+
+    suspend fun login(username: String, password: String): User? {
+        return database.userDao().login(username, password)
+    }
+
+    suspend fun getUserByUsername(username: String): User? {
+        return database.userDao().getUserByUsername(username)
+    }
+
+    val allUsers: LiveData<List<User>> = database.userDao().getAllUsers()
+
+    fun getUsersByRole(role: String): LiveData<List<User>> {
+        return database.userDao().getUsersByRole(role)
     }
 }

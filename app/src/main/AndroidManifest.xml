@@ -12,75 +12,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EHRSystem"
         tools:targetApi="31">
+
+        <!-- Login Activity - NEW LAUNCHER -->
         <activity
-            android:name=".DipenseMedicationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ViewPendingPrescriptions"
-            android:exported="false" />
-        <activity
-            android:name=".PrescribeMedicationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DiagnosePatientActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EnterTestResultsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ViewPendingTestsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RequestLabTestActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RecordVitalsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ViewPatientsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ViewPatientsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ViewPatientsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterPatientActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterPatientActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterPatientActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegisterPatientActivity"
-            android:exported="false" /> <!-- Main Activity (Launcher) -->
-        <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Other Activities -->
+        </activity>
+
+        <!-- Sign Up Activity -->
         <activity
-            android:name=".ReceptionistActivity"
+            android:name=".SignUpActivity"
             android:exported="false" />
+
+        <!-- Main Activity - NO LONGER LAUNCHER -->
         <activity
-            android:name=".NurseActivity"
+            android:name=".MainActivity"
             android:exported="false" />
-        <activity
-            android:name=".LabAssistantActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DoctorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PharmacistActivity"
-            android:exported="false" />
+
+        <!-- Role Activities -->
+        <activity android:name=".ReceptionistActivity" android:exported="false" />
+        <activity android:name=".NurseActivity" android:exported="false" />
+        <activity android:name=".LabAssistantActivity" android:exported="false" />
+        <activity android:name=".DoctorActivity" android:exported="false" />
+        <activity android:name=".PharmacistActivity" android:exported="false" />
+
+        <!-- Receptionist Module -->
+        <activity android:name=".RegisterPatientActivity" android:exported="false" />
+        <activity android:name=".ViewPatientsActivity" android:exported="false" />
+        <activity android:name=".ScheduleAppointmentActivity" android:exported="false" />
+
+        <!-- Nurse Module -->
+        <activity android:name=".RecordVitalsActivity" android:exported="false" />
+
+        <!-- Lab Assistant Module -->
+        <activity android:name=".RequestLabTestActivity" android:exported="false" />
+        <activity android:name=".ViewPendingTestsActivity" android:exported="false" />
+        <activity android:name=".EnterTestResultsActivity" android:exported="false" />
+
         <!-- Doctor Module -->
         <activity android:name=".DiagnosePatientActivity" android:exported="false" />
         <activity android:name=".PrescribeMedicationActivity" android:exported="false" />
@@ -88,6 +60,7 @@
         <!-- Pharmacist Module -->
         <activity android:name=".ViewPendingPrescriptionsActivity" android:exported="false" />
         <activity android:name=".DispenseMedicationActivity" android:exported="false" />
+
     </application>
 
 </manifest>

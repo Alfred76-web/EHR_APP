@@ -25,8 +25,7 @@ class ReceptionistActivity : AppCompatActivity() {
         }
 
         cardScheduleAppt.setOnClickListener {
-            // We'll implement this later
-            // startActivity(Intent(this, ScheduleAppointmentActivity::class.java))
+             startActivity(Intent(this, ScheduleAppointmentActivity::class.java))
         }
 
         btnBack.setOnClickListener {

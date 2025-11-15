@@ -12,9 +12,10 @@ import androidx.room.RoomDatabase
         LabTest::class,
         Diagnosis::class,
         Prescription::class,
-        Appointment::class
+        Appointment::class,
+        User::class  // Add this line
     ],
-    version = 1,
+    version = 2,  // Increment version from 1 to 2
     exportSchema = false
 )
 abstract class EHRDatabase : RoomDatabase() {
@@ -25,6 +26,7 @@ abstract class EHRDatabase : RoomDatabase() {
     abstract fun diagnosisDao(): DiagnosisDao
     abstract fun prescriptionDao(): PrescriptionDao
     abstract fun appointmentDao(): AppointmentDao
+    abstract fun userDao(): UserDao  // Add this line
 
     companion object {
         @Volatile
